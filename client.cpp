@@ -14,7 +14,7 @@ using namespace std;
 #include <netinet/in.h>
 #include <time.h>
 #include <arpa/inet.h>
-#include <fstream.h>
+#include <fstream>
 
 #define PORT 8888
 #define DEST_IP "127.0.0.1"
