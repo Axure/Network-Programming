@@ -3,7 +3,7 @@
 //
 
 #include "server.h"
-using namespace std;
+//using namespace std;
 #include<iostream>
 #include <netinet/in.h>
 #include<stdio.h>
@@ -56,10 +56,10 @@ int main(int argc,char *argv[])
     ss = socket(AF_INET, SOCK_STREAM, 0);
     if(ss<0)
     {
-        cout<<"[process infro]socket error"<<endl;
+        std::cout<<"[process infro]socket error"<<std::endl;
         return -1;
     }
-    cout<<"[process infro]socket successful"<<endl;
+    std::cout<<"[process infro]socket successful"<<std::endl;
 
     r = setsockopt(ss, SOL_SOCKET,SO_REUSEADDR, (void*)&opt,sizeof(opt));
     if (r == -1)
@@ -67,26 +67,26 @@ int main(int argc,char *argv[])
         perror("setsockopt(listen)");
         return 0;
     }
-    cout<<"[process infro]sockopt successful"<<endl;
+    std::cout<<"[process infro]sockopt successful"<<std::endl;
 
-    cout<<"?";
+    std::cout<<"?";
     err = bind(ss, (struct sockaddr*) &server_addr, sizeof( server_addr));
-    cout<<"err";
+    std::cout<<"err";
     if(err < 0)
     {
-        cout<<"[process infro]bind error"<<endl;
+        std::cout<<"[process infro]bind error"<<std::endl;
         return -1;
     }
-    cout<<"[process infro]bind successful";
+    std::cout<<"[process infro]bind successful";
 
 
     err=listen(ss, BACKLOG);
     if(err <0)
     {
-        cout<<"[process infro]listen error"<<endl;
+        std::cout<<"[process infro]listen error"<<std::endl;
         return -1;
     }
-    cout<<"[process infro]lisen successful";
+    std::cout<<"[process infro]lisen successful";
 
     for( ; ; )
     {
