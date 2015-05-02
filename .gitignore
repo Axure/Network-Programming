@@ -1,2 +1,8 @@
 # IDE files
 .idea
+
+# OS X
+.DS_Store
+
+# Binaries
+/bin
