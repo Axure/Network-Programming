@@ -6,3 +6,11 @@
 
 # Binaries
 /bin
+
+
+
+CMakeCache.txt
+CMakeFiles
+Makefile
+blog
+cmake_install.cmake

@@ -86,7 +86,7 @@ int main(int argc,char *argv[])
         std::cout<<"[process infro]listen error"<<std::endl;
         return -1;
     }
-    std::cout<<"[process infro]lisen successful";
+    std::cout<<"[process infro]listen successful";
 
     for( ; ; )
     {

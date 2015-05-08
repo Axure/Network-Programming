@@ -5,4 +5,6 @@
 #ifndef NETWORKPROGRAMMING_CLIENT_H
 #define NETWORKPROGRAMMING_CLIENT_H
 
+void process_conn_client(int s);
+
 #endif //NETWORKPROGRAMMING_CLIENT_H

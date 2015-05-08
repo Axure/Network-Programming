@@ -3,7 +3,6 @@
 //
 
 #include "client.h"
-using namespace std;
 #include<iostream>
 #include <stdio.h>
 #include <stdlib.h>
@@ -15,6 +14,9 @@ using namespace std;
 #include <time.h>
 #include <arpa/inet.h>
 #include <fstream>
+
+
+using namespace std;
 
 #define PORT 8888
 #define DEST_IP "127.0.0.1"
@@ -40,7 +42,7 @@ void process_conn_client(int s)
         outfile.getline(buffer,1025,'\n');
         write(s,buffer,1024);
         size = read(s, buffer, 1024);
-        if(size = 0)
+        if(size == 0)
         {
             return ;
         }
